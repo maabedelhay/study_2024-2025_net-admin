@@ -1,0 +1,33 @@
+en
+conf t
+
+///////////
+hostname msk-donskaya-sw-1
+/////
+
+interface vlan2
+no shutdown
+
+/////////
+ip address 10.128.1.2 255.255.255.0
+/////////
+exit
+
+ip default-gateway 10.128.1.1
+line vty 0 4
+password cisco
+login
+exit
+enable secret cisco
+service password-encryption
+username admin privilege 1 secret cisco
+ip domain-name donskaya.rudn.edy
+crypto key generate rsa
+
+line vty 0 4
+transport input ssh
+exit
+exit
+
+wr mem
+

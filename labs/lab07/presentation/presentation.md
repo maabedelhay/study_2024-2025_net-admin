@@ -9,7 +9,7 @@ institute:
   - Российский университет дружбы народов, Москва, Россия
   - Объединённый институт ядерных исследований, Дубна, Россия
 date: 01 января 1970
-
+mainfont: "Times New Roman" 
 ## i18n babel
 babel-lang: russian
 babel-otherlangs: english
