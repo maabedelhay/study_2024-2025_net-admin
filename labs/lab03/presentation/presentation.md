@@ -46,27 +46,51 @@ header-includes:
 
 ![Физические устройства сети с номерами портов (Layer 1)](../report/image/net1L1.png){#fig:001 width=100%}
 
+## Сеть1 Таблица портов
+
 ![net1](../report/image/net1Tablesports.png){#fig:002 width=100%}
+
+## Сеть1 Диаграм l2
 
 ![net1 Диаграм l2](../report/image/net1L2.png){#fig:003 width=100%}
 
+## Сеть1 Таблица VLAN
+
 ![net1](../report/image/net1Tablesvlan.png){#fig:004 width=100%}
+
+## Сеть1 Диаграм l3
 
 ![net1 Диаграм l3](../report/image/net1L3.png){#fig:005 width=100%}
 
+## Сеть1 Таблица IP
+
 ![net1 ](../report/image/net1Tablesip.png){#fig:006 width=100%}
+
+## Сеть2 Диаграм l1
 
 ![net2 Диаграм l1](../report/image/net2L1.png){#fig:007 width=100%}
 
+## Сеть2 Таблица портов
+
 ![net2 ](../report/image/net2Tablesports.png){#fig:008 width=100%}
 
+## Сеть2 Диаграм l2
+
 ![net2 Диаграм l2](../report/image/net2L2.png){#fig:009 width=100%}
+ 
+## Сеть2 Таблица VLAN
 
 ![net2 ](../report/image/net2Tablesvlan.png){#fig:010 width=100%}
 
+## Сеть2 Диаграм l3
+
 ![net2 Диаграм l3](../report/image/net2L3.png){#fig:011 width=100%}
 
+## Сеть2 Таблица IP
+
 ![net2 ](../report/image/net2Tablesip.png){#fig:012 width=100%}
+
+## Сеть3 Диаграм l1
 
 ![net3 ](../report/image/net3L1.png){#fig:013 width=100%}
 
