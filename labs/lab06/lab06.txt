@@ -1,0 +1,65 @@
+#router
+en
+conf t
+hostname msk-donskaya-maabedelhay-gw-1
+
+interface f0/0
+no shutdown
+exit
+line vty 0 4
+password cisco
+login
+exit
+
+line console 0
+password cisco
+login
+exit
+
+enable secret cisco
+service password-encryption
+
+username admin privilege 1 secret cisco
+ip domain-name donskaya.rudn.ru
+
+crypto key generate rsa
+
+line vty 0 4
+transport input ssh
+
+////////////////////
+interface f0/0.2
+encapsulation dot1Q 2
+ip address 10.128.1.1 255.255.255.0
+description management
+
+interface f0/0.3
+encapsulation dot1Q 3
+ip address 10.128.0.1 255.255.255.0
+description servers
+
+interface f0/0.101
+encapsulation dot1Q 101
+ip address 10.128.3.1 255.255.255.0
+description dk
+
+interface f0/0.102
+encapsulation dot1Q 102
+ip address 10.128.4.1 255.255.255.0
+description departments
+
+interface f0/0.103
+encapsulation dot1Q 103
+ip address 10.128.5.1 255.255.255.0
+description adm
+
+interface f0/0.104
+encapsulation dot1Q 104
+ip address 10.128.6.1 255.255.255.0
+description other
+
+
+#sw-1
+intercace f0/24
+switcport mode trunk
+wr mem

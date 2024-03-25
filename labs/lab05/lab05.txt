@@ -1,0 +1,80 @@
+#Donskaya
+#sw1
+en
+conf t
+interface g0/1
+switchport mode trunk
+exit
+interface g0/2
+switchport mode trunk
+exit
+interface f0/1
+switchport mode trunk
+exit
+wr mem
+
+#sw2
+en
+conf t
+interface g0/1
+seitchport mode trungk
+exit
+wr mem
+
+...
+
+#Vlan
+#sw1
+conf t
+vlan 2
+name managment
+vlan 3
+name servers
+vlan 101
+name dk
+vlan 102
+name departments
+vlan 103
+name adm
+vlan 104
+name other
+wr mem
+sh vlan
+
+coonf t
+vttp domain donskaya
+vtp mode servers
+vtp password cisco
+er mem
+sh vtp status
+
+#sw2
+cofn t
+vtp mode client
+vtp password cisco
+wr mem
+
+...
+#access ports
+
+#sw4
+conf t
+interface range f0/1 - 5
+switchport mode access vlan 101
+interface rnage f0/6 - 10
+switchport mode access vlan 102
+interface range f0/11 - 15
+switchport mode access vlan 103
+interface range f0/16 - 14
+switch port mode access vlan 104
+wr mem
+
+#sw1-pav
+conf t
+interface range f0/1 - 15
+switchport mode access vlan 101
+interface f0/20
+switchport mode access vlan 104
+...
+
+
